@@ -1,0 +1,46 @@
+abcdAA  DSf _  	   asdfsd=
+    asdf$W%$^@)*&@!(*$%!#@casdfasdf
+    M
+
+		asdf asdfABC
+		asdfasdf asdf 	 asdf
+			asdf
+()()()():;（）
+@@!@#$%^&*().\^{}[]
+\|asdf:?
+oooooo
+oooooo
+0
+1234
+121234---____
+120
+10
+01
+<h1>你好呀<h2>
+print('1234', "1234".isdecimal())  # 1234 True
+print("１２３４", "１２３４".isdecimal())  # １２３４ True
+print("12.34", "12.34".isdecimal())  # 12.34 False
+print("¹²³", "¹²³".isdecimal())  # ¹²³ False
+print("ⅠⅡⅢⅣⅤ", "ⅠⅡⅢⅣⅤ".isdecimal())  # ⅠⅡⅢⅣⅤ False
+print("①②③④⑤", "①②③④⑤".isdecimal())  # ①②③④⑤ False
+print("1/3", "1/3".isdecimal())  # 1/3 False
+print("¼", "¼".isdecimal())  # ¼ False
+print("0b1011", "0b1011".isdecimal())  # 0b1011 False
+print("0xAB", "0xAB".isdecimal())  # 0xAB False
+print("1 2 3 4", "1 2 3 4".isdecimal())  # 1 2 3 4 False
+print("abc123", "abc123".isdecimal())  # abc123 False
+print("abc123", "abc123".isdecimal())  # abc123 False
+print("一二三四", "一二三四".isdecimal())  # 一二三四 False
+ Chapter
+Chapter01Chapter02 Chapter03 ter
+hello1234hello1234hello1234
+Is is the cost of of gasoline going up up?
+aa bb  aa aa dd cc ab ab cc dd ee ff aA bB c C
+112333431234123asf123412341212114444\1
+abb cdd dcc
+恶心心 肉妈妈
+①
+
+企业名称：杭州聚雅文化创意有限公司|住所：
+foo1
+foo2
