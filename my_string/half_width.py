@@ -32,8 +32,4 @@ def full2half(str1):
     return str1
 
 
-print(full2half('ａｂ１ａｂｃxyz'))
-print(full2half(''))
-for i in string.printable:
-    print(chr(ord(i)+1)>i)
-print(len('10000000001'))
+print(full2half('（'))
