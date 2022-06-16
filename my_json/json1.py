@@ -1,0 +1,64 @@
+import json
+
+# 对基本的 Python 对象层次结构进行编码
+
+l1 = ['e1', {'k': ('t1', None, 1.0, 2)}]
+print(l1, type(l1))
+# ['e1', {'k': ('t1', None, 1.0, 2)}] <class 'list'>
+
+print(json.dumps(l1), type(json.dumps(l1)))
+# ["e1", {"k": ["t1", null, 1.0, 2]}] <class 'str'>
+print(json.dumps(''))
+# ""
+
+str1 = "\"foo\bar"
+str2 = '\"foo\bar'
+print(str1, str2, str1 == str2)
+# "foar "foar True
+print(json.dumps(str1), json.dumps(str1)[0])
+# "\"foo\bar"
+print(json.dumps(str2))
+# "\"foo\bar"
+print(json.dumps(1))
+# 1
+print('\u9999', json.dumps('\u9999'), r'\u9999')
+# 香 "\u9999" \u9999
+print(json.dumps({"c": 0, "b": 2, "a": 0}, sort_keys=True))
+# {"a": 0, "b": 0, "c": 0}
+
+# 紧凑编码
+l2 = [1, 2, 3, {'4': 5, '6': 7}]
+print(l2)
+# [1, 2, 3, {'4': 5, '6': 7}]
+print(json.dumps(l2, separators=(',', '->')))
+# [1,2,3,{"4"->5,"6"->7}]
+
+# 美化输出:
+print(json.dumps({'a': 97, 'A': 65, 'c': '99'}, sort_keys=False, indent=4, separators=(',', ':')))
+# {
+#     "a":97,
+#     "A":65,
+#     "c":"99"
+# }
+
+# JSON解码:
+s1 = '[1,2,{"3":4,"5":6}]'
+print(s1, type(s1))
+# [1,2,{"3":4,"5":6}] <class 'str'>
+j1 = json.loads(s1)
+print(j1, type(j1))
+# [1, 2, {'3': 4, '5': 6}] <class 'list'>
+s2 = '"\\"foo\\bar"'
+print(s2)
+print(json.loads(s2))
+
+
+# 特殊JSON对象解码:
+
+def as_complex(dct):
+    if '__complex__' in dct:
+        return complex(dct['real'], dct['imag'])
+    return dct
+
+
+print(as_complex('a__complex__'))
