@@ -52,13 +52,22 @@ s2 = '"\\"foo\\bar"'
 print(s2)
 print(json.loads(s2))
 
+print('\u4e00-\u9fa5', hex(ord('龥')))
+# 一-龥 0x9fa5
 
-# 特殊JSON对象解码:
-
-def as_complex(dct):
-    if '__complex__' in dct:
-        return complex(dct['real'], dct['imag'])
-    return dct
-
-
-print(as_complex('a__complex__'))
+l = [5, 1, 2]
+print(json.dumps(l, sort_keys=True))  # sort_keys仅对字段有效
+# [5, 1, 2]
+print(json.dumps(l, indent=4, separators=('#', '@')))
+# [
+#     5#
+#     1#
+#     2
+# ]
+# ]
+print(json.dumps(l, indent='aa', separators=(', ', ': ')))
+# [
+# aa5,
+# aa1,
+# aa2
+# ]
