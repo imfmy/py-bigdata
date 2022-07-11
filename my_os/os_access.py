@@ -6,7 +6,6 @@
 #            effective_ids: bool = ...,
 #            follow_symlinks: bool = ...) -> bool
 import os
-
 file_path = '../resource/a.txt'
 ret = os.access(path=file_path, mode=os.F_OK)
 print(f'os.F_OK --> {ret}')
