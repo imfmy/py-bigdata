@@ -3,6 +3,9 @@ import sys
 
 print(sys.path)
 print(__file__, 'xxx')
+# D:\Projects\pythonProject\my_os\os_path.py xxx
+print(__name__)
+# __main__
 ret = os.path.abspath(__file__)
 print(ret)
 # D:\PyCharmProjects\python-project1\os\os_path.py
