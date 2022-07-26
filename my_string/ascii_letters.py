@@ -45,8 +45,8 @@ for i in string.whitespace:
 # ("'\t'", 9) ## 制表符
 # ("'\n'", 10) ## 换行符
 # ("'\r'", 13) ## 回车符
-# ("'\x0b'", 11)
-# ("'\x0c'", 12)
+# ("'\x0b'", 11) ##\v 垂直制表符
+# ("'\x0c'", 12) ##\f 换页
 print(
     string.printable == string.digits + string.ascii_lowercase + string.ascii_uppercase + string.punctuation + string.whitespace)
 # True
