@@ -5,5 +5,5 @@
 #           follow_symlinks: bool = ...) -> None
 import os, stat
 
-file_path = '../resource/a.txt'
+file_path = '../../resource/a.txt'
 os.chmod(path=file_path, mode=stat.S_IXUSR)

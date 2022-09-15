@@ -11,7 +11,7 @@ print(ret)
 # D:\PyCharmProjects\python-project1\os\os_path.py
 
 # 获取文件的绝对路径
-file_path = '../resource/a.txt'
+file_path = '../../resource/a.txt'
 print(f'{os.path.abspath(file_path)}')
 # D:\PyCharmProjects\python-project1\resource\a.txt
 
