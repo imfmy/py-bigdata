@@ -11,3 +11,4 @@ print(dict1)
 dict2 = {k: v for k, v in zip(dk, dv)}
 print(dict2)
 # {'a': 1, 'b': 2, 'c': 3}
+
