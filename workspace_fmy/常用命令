@@ -1,0 +1,11 @@
+# Kafka常用命令
+    # 查看主题
+    bin/kafka-topics.sh --zookeeper hadoop102:2181/kafka --list
+    # 创建主题
+    bin/kafka-topics.sh --zookeeper hadoop102:2181/kafka --create --replication-factor 3 --partitions 1 --topic first
+    # 删除主题：需设置delete.topic.enable=true否则为软删除
+    bin/kafka-topics.sh --zookeeper hadoop102:2181/kafka --delete --topic first
+    # 生产者发送消息
+    bin/kafka-console-producer.sh --broker-list hadoop102:9092 --topic first
+    # 消费者消费消息
+    bin/kafka-console-consumer.sh --bootstrap-server hadoop102:9092 --from-beginning --topic first
