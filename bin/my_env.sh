@@ -14,3 +14,7 @@ export PATH=$PATH:$KAFKA_HOME/bin
 # HIVE_HOME
 export HIVE_HOME=/opt/module/hive
 export PATH=$PATH:$HIVE_HOME/bin
+
+#HBASE_HOME
+export HBASE_HOME=/opt/module/hbase
+export PATH=$PATH:$HBASE_HOME/bin
