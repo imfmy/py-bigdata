@@ -9,3 +9,7 @@
     bin/kafka-console-producer.sh --broker-list hadoop102:9092 --topic first
     # 消费者消费消息
     bin/kafka-console-consumer.sh --bootstrap-server hadoop102:9092 --from-beginning --topic first
+
+ # hbase常用命令
+    # 群起hbase
+    bin/start-hbase.sh
