@@ -21,4 +21,20 @@
  */
 -->
 <configuration>
+    <!-- 设置hbase在hdfs上存放数据的根目录 -->
+    <property>
+        <name>hbase.rootdir</name>
+        <value>hdfs://hadoop102:8020/HBase</value>
+    </property>
+    <!-- 设置是否以分布式启动HBase -->
+    <property>
+        <name>hbase.cluster.distributed</name>
+        <value>true</value>
+    </property>
+    <!-- 设置hbase使用的外部的zk-->
+    <property>
+        <name>hbase.zookeeper.quorum</name>
+        <value>hadoop102,hadoop103,hadoop104</value>
+    </property>
+
 </configuration>
