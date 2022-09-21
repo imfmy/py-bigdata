@@ -51,7 +51,7 @@
 # Set the ZooKeeper connection string if using an external ZooKeeper ensemble
 # e.g. host1:2181,host2:2181/chroot
 # Leave empty if not using SolrCloud
-#ZK_HOST=""
+ZK_HOST="hadoop102:2181,hadoop103:2181,hadoop104:2181"
 
 # Set the ZooKeeper client timeout (for SolrCloud mode)
 #ZK_CLIENT_TIMEOUT="15000"
