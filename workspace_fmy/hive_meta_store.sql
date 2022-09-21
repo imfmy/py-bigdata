@@ -1,0 +1,22 @@
+-- ================================================
+-- Author: 范明月
+-- Create date: 2022-09-21 
+-- Input table: 
+-- Output table:
+-- Description: 
+-- Modify [1]: 
+-- Modify [2]: 
+-- ================================================
+-- # 修改表字段和表注解
+ALTER TABLE COLUMNS_V2 MODIFY COLUMN COMMENT VARCHAR(256) CHARACTER SET utf8;
+ALTER TABLE TABLE_PARAMS MODIFY COLUMN PARAM_VALUE VARCHAR(4000) CHARACTER SET utf8;
+
+-- # 修改库字段注解
+ALTER TABLE DBS MODIFY COLUMN `DESC` VARCHAR(256) CHARACTER SET utf8;
+
+-- # 修改分区字段注解
+ALTER TABLE PARTITION_PARAMS MODIFY COLUMN PARAM_VALUE VARCHAR(4000) CHARACTER SET utf8;
+ALTER TABLE PARTITION_KEYS MODIFY COLUMN PKEY_COMMENT VARCHAR(4000) CHARACTER SET utf8;
+
+-- # 修改索引字段注解
+ALTER TABLE INDEX_PARAMS MODIFY COLUMN PARAM_VALUE VARCHAR(4000) CHARACTER SET utf8;
