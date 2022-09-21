@@ -67,4 +67,4 @@ export MANAGE_EMBEDDED_CASSANDRA=false
 # indicates whether or not a local instance of Elasticsearch should be started for Atlas
 export MANAGE_LOCAL_ELASTICSEARCH=false
 
-export HBASE_CONF_IDR=/opt/module/hbase/conf
+export HBASE_CONF_DIR=/opt/module/hbase/conf
