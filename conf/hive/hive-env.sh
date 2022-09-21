@@ -50,3 +50,4 @@ export HADOOP_HEAPSIZE=1024
 
 # Folder containing extra libraries required for hive compilation/execution can be controlled by:
 # export HIVE_AUX_JARS_PATH=
+export HIVE_AUX_JARS_PATH=/opt/module/atlas/hook/hive
