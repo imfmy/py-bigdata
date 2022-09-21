@@ -77,7 +77,7 @@
     </appender>
 
     <!-- Uncomment the following for perf logs -->
-    <!--
+
     <appender name="perf_appender" class="org.apache.log4j.DailyRollingFileAppender">
         <param name="file" value="${atlas.log.dir}/atlas_perf.log" />
         <param name="datePattern" value="'.'yyyy-MM-dd" />
@@ -91,7 +91,7 @@
         <level value="debug" />
         <appender-ref ref="perf_appender" />
     </logger>
-    -->
+
 
     <logger name="org.apache.atlas" additivity="false">
         <level value="info"/>
