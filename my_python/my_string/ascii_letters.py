@@ -76,4 +76,4 @@ def full2half(str1):
                 str1 = str1.replace()
 
 
-print(0xff00)
+print(hex(ord('　')))

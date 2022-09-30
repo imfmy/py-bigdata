@@ -25,3 +25,10 @@ print(re.split(r'\b', 'Words,|...words,- words.'))
 # ['', 'Words', ',|...', 'words', ',- ', 'words', '.']
 # //print(re.split(r'\b+', 'Words,|...words,- words.'))
 # re.error: nothing to repeat at position 2
+
+# 根据：空格（两边非英文） , ， \ / 、 ; ；| 等标点符号（不区分全角半角）分开为多个机构
+str1 = r'机构1 机构2,机构3，机构4\机构5/机构6、机构7;机构8；机构9|机构10 a   b  、，a#@#a'
+print(re.split(r'[,，\\/、;；| ]+', str1))
+print(re.sub(r'(?<=[a-zA-Z]) +(?=[a-zA-Z])','#$#','@    @ aa bb'))
+# 浙江省印刷协会　　　　　　　　　宁波市印刷行业协会
+print(re.sub('[\u3000 ]+',' ','　　　　　宁波市印刷行业协会'))
