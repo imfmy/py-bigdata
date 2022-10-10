@@ -5,8 +5,10 @@ import re
 #             flags: int | RegexFlag = ...) -> list
 print(re.findall(r'\bf[a-z]*', 'which foot or hand fell fastest'))
 # ['foot', 'fell', 'fastest']
-print(re.findall(r'(\w+)=(\d+)', 'set width=20 and height=10'))
+print(re.findall(r'(\w+)=(\d+)', 'set width=20 and height=10 and long='))
 # [('width', '20'), ('height', '10')]
+print(re.findall(r'(\w+)=(\d*)', 'set width=20 and height=10 and long='))
+# [('width', '20'), ('height', '10'), ('long', '')]
 print(re.findall(r'(?:\w+)=(\d+)', 'set width=20 and height=10'))
 # ['20', '10']
 print(re.findall(r'(\w+)=(?=\d+)', 'set width=20 and height=10 hi'))

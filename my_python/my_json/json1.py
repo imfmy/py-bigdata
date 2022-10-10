@@ -15,17 +15,22 @@ str1 = "\"foo\bar"
 str2 = '\"foo\bar'
 print(str1, str2, str1 == str2)
 # "foar "foar True
-print(json.dumps(str1), json.dumps(str1)[0])
-# "\"foo\bar"
+print(json.dumps(str1), json.dumps(str1)[0], sep='|')
+# "\"foo\bar"|"
 print(json.dumps(str2))
 # "\"foo\bar"
 print(json.dumps(1))
 # 1
 print('\u9999', json.dumps('\u9999'), r'\u9999')
 # 香 "\u9999" \u9999
+# #默认sort_keys=False不会对key排序
 print(json.dumps({"c": 0, "b": 2, "a": 0}, sort_keys=True))
 # {"a": 0, "b": 0, "c": 0}
 
+str3 = '你好abc'
+# #默认ensure_ascii=True是以ascii码形式显示字符（中文会以Unicode编码展示）
+print(json.dumps(str3), json.dumps(str3, ensure_ascii=False), sep='|')
+# "\u4f60\u597dabc"|"你好abc"
 # 紧凑编码
 l2 = [1, 2, 3, {'4': 5, '6': 7}]
 print(l2)
@@ -49,14 +54,13 @@ j1 = json.loads(s1)
 print(j1, type(j1))
 # [1, 2, {'3': 4, '5': 6}] <class 'list'>
 s2 = '"\\"foo\\bar"'
-print(s2)
-print(json.loads(s2))
-
+print('57:', s2, json.loads(s2), sep='|')
+# 57:|"\"foo\bar"|"foar
 print('\u4e00-\u9fa5', hex(ord('龥')))
 # 一-龥 0x9fa5
 
 l = [5, 1, 2]
-print(json.dumps(l, sort_keys=True))  # sort_keys仅对字段有效
+print(json.dumps(l, sort_keys=True))  # sort_keys仅对字典有效
 # [5, 1, 2]
 print(json.dumps(l, indent=4, separators=('#', '@')))
 # [
