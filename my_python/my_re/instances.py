@@ -20,3 +20,6 @@ print(re.findall(r'(?<!: )"([\u4e00-\u9fa5a-zA-Z]+?)"(?!,)', text2))
 it2 = re.finditer(r'(?<!: )"([\u4e00-\u9fa5a-zA-Z]+?)"(?!,)', text2)
 for i in it2:
     print(i, type(i), i.group(0), i.groups(), sep='|')
+"""正则：取字典的值"""
+text3 = '{"afterSaleRating": 5.0, "logisticsRating": 5.0, "synRating": 5.0, "userRating": 5.0}'
+# (?<=:)\s*([0-9."]+?)\s*(?=,|})
