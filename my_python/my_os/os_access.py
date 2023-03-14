@@ -19,3 +19,9 @@ print(f'os.W_OK --> {ret}')
 ret = os.access(path=file_path, mode=os.X_OK)
 print(f'os.X_OK --> {ret}')
 # os.X_OK --> True
+print(ord('	'))
+print(ord('\t'))
+print(ord('\v'))
+print(ord('\f'))
+print('\v')
+
