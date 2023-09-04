@@ -30,6 +30,7 @@
 │   ├── ${project}                                   -- 项目名称
 ├── requirements.txt                                     -- 项目需要的Python包
 ├── workspace                                            -- 工作区域
+--
 └── lxy                                                  -- Python项目文件
 ```
 
