@@ -1,15 +1,15 @@
 abcdAA  DSf _  	   asdfsd=
     asdf$W%$^@)*&@!(*$%!#@casdfasdf
     M
-
-		asdf asdfABC
+	asdf asdfABC
 		asdfasdf asdf 	 asdf
 			asdf
 ()()()():;（）
 @@!@#$%^&*().\^{}[]
 \|asdf:?
 oooooo
-oooooo
+ooooo
+A1b2c3D4qq5xY2z4
 0
 1234
 121234---____
@@ -31,7 +31,7 @@ print("1 2 3 4", "1 2 3 4".isdecimal())  # 1 2 3 4 False
 print("abc123", "abc123".isdecimal())  # abc123 False
 print("abc123", "abc123".isdecimal())  # abc123 False
 print("一二三四", "一二三四".isdecimal())  # 一二三四 False
- Chapter
+ Chapterssswr
 Chapter01Chapter02 Chapter03 ter
 hello1234hello1234hello1234
 Is is the cost of of gasoline going up up?
@@ -46,3 +46,30 @@ foo1
 foo2
 12 ab 14m
 中华人民共和国农业农村部 　　中华全国供销合作总社 　　中国国际贸易促进委员会 　　海南省人民政府
+
+
+明明白白 '研究研究' 13500000001  头头是道,  "拐弯抹角"  忍辱不争
+轰轰烈烈 '运动运动' 13599999999  嗷嗷待哺,  "空穴来风"  犯而不校
+隐隐约约 '娱乐娱乐' 13588888888  彬彬有礼,  "胶柱鼓瑟"  若即若离
+吞吞吐吐 '清醒清醒' 13577777777  栩栩如生,  "混水摸鱼"  无动于中
+蹦蹦跳跳 '放松放松' 12345678901  铮铮铁汉,  "惜墨如金"  不置可否
+浩浩荡荡 '渐渐渐渐' 15876543210  步步为营,  "下马看花"  户枢不蠹
+偷偷摸摸 '快乐快乐' 13900000001  面面俱到,  "树大招风"  画蛇添足
+知足不辱 '辛苦辛苦' 18000000002  闪闪发光,  "修桥补路"
+知止不殆 '安静安静' 13700000003  念念不忘,  "引火烧身"
+流水不腐 '辛苦辛苦' 16987654321  斤斤计较,  "拔树撼山"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
