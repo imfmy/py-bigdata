@@ -1,7 +1,7 @@
 #! /bin/bash
 #1. 判断参数个数：如果小于等于一个参数则提示然后退出
 if [ $# -lt 1 ]; then
-  echo Not Enough Arguement!
+  echo "Not Enough Argument!"
   exit
 fi
 #2. 如果参数个数合规，则遍历集群所有机器
