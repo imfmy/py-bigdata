@@ -1,6 +1,8 @@
 import os.path
 import sys
-
+"""
+asdfasdfas
+"""
 print(sys.path)
 print(__file__, 'xxx')
 # D:\Projects\pythonProject\my_os\os_path.py xxx

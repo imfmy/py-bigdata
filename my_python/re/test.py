@@ -1,1 +1,1 @@
-print(ord('　'))
+print("//%s" % 'abc')
