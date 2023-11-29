@@ -24,3 +24,12 @@ tp1 = (1, 2, 3)
 tp2 = (1, 2, 3,)
 print(tp1 == tp2, id(tp1), id(tp2))  # True 1738638607488 1738638607488
 print(len(tp1))  # 3
+
+# 当拆分元组时，对于元组中不需要的信息，可以用“_”表示，不用再额外定义变量名
+user_info = ("Jack", "12", "135xxxxxxx", "boy")
+print(user_info, type(user_info))
+name, _, _, gender = user_info
+print(f'name={name}, gender={gender}')
+# name=Jack, gender=boy
+print(_)
+# 135xxxxxxx
