@@ -13,16 +13,19 @@ print(json.dumps(''))
 
 str1 = "\"foo\bar"
 str2 = '\"foo\bar'
-print(str1, str2, str1 == str2)
-# "foar "foar True
+str3 = '\"foar'
+print(str1, str2, str3, str1 == str2, str2 == str3)
+# "foar "foar "foar True False
 print(json.dumps(str1), json.dumps(str1)[0], sep='|')
 # "\"foo\bar"|"
 print(json.dumps(str2))
 # "\"foo\bar"
 print(json.dumps(1))
 # 1
-print('\u9999', json.dumps('\u9999'), r'\u9999')
-# 香 "\u9999" \u9999
+
+print('\u9999', json.dumps('\u9999'), r'\u9999',json.dumps('\u9999',ensure_ascii=False))
+# 香 "\u9999" \u9999 "香"
+
 # #默认sort_keys=False不会对key排序
 print(json.dumps({"c": 0, "b": 2, "a": 0}, sort_keys=True))
 # {"a": 0, "b": 0, "c": 0}
