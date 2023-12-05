@@ -24,3 +24,7 @@ print(m2.groups(), m2.group(0), m2.group(), m2.group(1), m2.group(2))
 # ('he', 'llo') hello hello he
 m3 = re.search('(123)', text1)
 print(m3)  # <re.Match object; span=(15, 18), match='123'>
+
+
+
+
