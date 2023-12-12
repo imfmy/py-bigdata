@@ -47,7 +47,8 @@
     <!-- 设置日志聚集服务器地址 -->
     <property>
         <name>yarn.log.server.url</name>
-        <value>http://hadoop102:19888/jobhistory/logs</value>
+<!--        <value>http://hadoop102:19888/jobhistory/logs</value>-->
+        <value>http://hadoop101:19888/jobhistory/logs</value>
     </property>
 
     <!-- 设置日志保留时间为7天 -->
