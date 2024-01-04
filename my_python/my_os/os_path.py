@@ -1,8 +1,8 @@
-import os.path
-import sys
 """
 asdfasdfas
 """
+import os.path
+import sys
 print(sys.path)
 print(__file__, 'xxx')
 # D:\Projects\pythonProject\my_os\os_path.py xxx
@@ -36,3 +36,7 @@ print(f'os.path.exist(file_name) -- {os.path.exists(file_path)}')
 # os.path.exist -- True
 print(f'os.path.exist(a.sss) -- {os.path.exists("a.sss")}')
 # os.path.exist(a.sss) -- False
+
+if __name__ == '__main__':
+    print("hello")
+    print("hehe")
