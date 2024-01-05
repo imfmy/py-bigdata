@@ -7,6 +7,5 @@
 # d2["a"]= {}
 # d2["a"]["b"]=1
 # print(d2)
-print(max({4: 2, 2: 23, 3: 11, 1: 1}))
-# print({4: 2, 5: 23, 3: 11, 1: 1}[])
-print(list("abc"))
+a = 'True'
+print( None is True)
