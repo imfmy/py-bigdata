@@ -7,7 +7,7 @@
      -->
     <property>
         <name>javax.jdo.option.ConnectionURL</name>
-        <value>jdbc:mysql://hadoop102:3306/metastore?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8
+        <value>jdbc:mysql://hadoop101:3306/metastore?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8
         </value>
     </property>
 
@@ -26,7 +26,7 @@
     <!-- jdbc 连接的 password -->
     <property>
         <name>javax.jdo.option.ConnectionPassword</name>
-        <value>123456</value>
+        <value>Fan748741.</value>
     </property>
 
     <!-- Hive的数据存放目录：默认在 HDFS 的工作目录 -->
@@ -44,14 +44,14 @@
     <!-- 指定hiveserver2的连接host -->
     <property>
         <name>hive.server2.thrift.bind.host</name>
-        <value>hadoop102</value>
+        <value>hadoop101</value>
     </property>
 
     <!-- 指定存储元数据要连接的地址 -->
-    <!--     <property>
-            <name>hive.metastore.uris</name>
-            <value>thrift://hadoop102:9083</value>
-        </property> -->
+    <property>
+        <name>hive.metastore.uris</name>
+        <value>thrift://hadoop101:9083</value>
+    </property>
 
     <!--元数据存储授权-->
     <property>
