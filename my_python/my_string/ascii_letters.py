@@ -53,8 +53,8 @@ print(
 
 half_width = '\x20' + string.punctuation + string.ascii_uppercase + string.ascii_lowercase + string.digits
 full_width = '\u3000' + ''.join(chr(ord(i) + 65248) for i in half_width[1:96])
-print('half_width：',half_width, len(half_width), sep=' --')
-print('full_width：',full_width, len(full_width), sep=' --')
+print('half_width：',half_width, len(half_width), sep='》》')
+print('full_width：',full_width, len(full_width), sep='》》')
 print([e for e in full_width], len([e for e in full_width]))
 print('\x20', '\u3000')
 full_half = zip([e for e in full_width], [h for h in half_width])
