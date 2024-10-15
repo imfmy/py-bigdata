@@ -21,3 +21,13 @@ print("Fortran 风格的未初始化数组:\n", empty_fortran_array)
 # Fortran 风格的未初始化数组:
 #  [[ 1.02380627e-306  8.77010924e-301]
 #  [ 3.96786132e-301 -1.00581973e+060]]
+
+# 创建一个 5 个元素的未初始化数组
+array_size = 5
+result_array = np.empty(array_size)
+
+# 填充数据
+for i in range(array_size):
+    result_array[i] = i * 10
+
+print("填充后的数组:\n", result_array)
