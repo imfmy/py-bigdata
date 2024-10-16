@@ -5,5 +5,8 @@ spark = SparkSession.builder.getOrCreate()
 sc = SparkContext("local", "PySpark Example")
 ####### 初始化 spark、sc #######
 
+
+
+
 ####### 关闭 SparkContext #######
 sc.stop()
