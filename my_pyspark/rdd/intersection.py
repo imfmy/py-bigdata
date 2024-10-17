@@ -1,5 +1,5 @@
 from pyspark import SparkConf, SparkContext
-
+import pyspark.storagelevel
 conf = SparkConf().setAppName('')
 sc = SparkContext(conf=conf)
 rdd1 = sc.parallelize(range(5), 1)
