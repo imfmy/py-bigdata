@@ -12,6 +12,9 @@ print(arr)
 arr = np.array([1, 2, 3, 4], ndmin=2)
 print(arr)
 # [[1 2 3 4]]
+arr = np.array([1, 2, 3, 4], ndmin=3)
+print(arr)
+# [[[1 2 3 4]]]
 
 arr1 = np.array([1, 2, 3])
 arr2 = np.array(arr1, copy=False)
