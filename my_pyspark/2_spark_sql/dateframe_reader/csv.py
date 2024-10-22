@@ -1,13 +1,22 @@
-from pyspark.sql import SparkSession
+from pyspark import SparkContext
+from pyspark.sql.session import SparkSession
 
-# 创建 SparkSession
-spark = SparkSession.builder.appName("CSVReaderExample").getOrCreate()
+spark = SparkSession.builder.appName("Example").config("k1", "v1").getOrCreate()
+# sc = SparkContext("local", "PySpark Example")
+####### 初始化 spark、sc #######
 
-# 读取 CSV 文件
-df = spark.read.csv("path/to/file.csv", header=True, inferSchema=True, sep=",")
+import tempfile
 
-# 展示前 5 行
-df.show(5)
+with tempfile.TemporaryDirectory() as d:
+    # Write a DataFrame into a CSV file
+    df = spark.createDataFrame([{"age": 100, "name": "Hyukjin Kwon"}])
+    df.write.mode("overwrite").format("csv").save(d)
+    spark.read.csv(d, schema=df.schema, nullValue="Hyukjin Kwon").show()
+# +---+----+
+# |age|name|
+# +---+----+
+# |100|null|
+# +---+----+
 
-# 停止 SparkSession
-spark.stop()
+####### 关闭 SparkContext #######
+# sc.stop()
