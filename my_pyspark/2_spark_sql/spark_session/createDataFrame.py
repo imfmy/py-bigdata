@@ -29,7 +29,7 @@ spark.createDataFrame(d).show()
 # |  1|Alice|
 # | 13|   zs|
 # +---+-----+
-spark.createDataFrame(d,['name1','age1']).show()
+spark.createDataFrame(d, ['name1', 'age1']).show()
 # +-----+-----+
 # |name1| age1|
 # +-----+-----+
@@ -38,10 +38,10 @@ spark.createDataFrame(d,['name1','age1']).show()
 # +-----+-----+
 
 from pyspark.sql.types import *
-schema = StructType([
-   StructField("name", StringType(), True),
-   StructField("age", IntegerType(), True)])
-spark.createDataFrame([('Alice', 1),("张三",13)], schema).show()
+
+schema = StructType([StructField("name", StringType(), True),
+                     StructField("age", IntegerType(), True)])
+spark.createDataFrame([('Alice', 1), ("张三", 13)], schema).show()
 # +-----+---+
 # | name|age|
 # +-----+---+
@@ -49,7 +49,7 @@ spark.createDataFrame([('Alice', 1),("张三",13)], schema).show()
 # | 张三| 13|
 # +-----+---+
 
-spark.createDataFrame([('Alice', 1),("张三",13)], "name: string, age: int").show()
+spark.createDataFrame([('Alice', 1), ("张三", 13)], "name: string, age: int").show()
 # +-----+---+
 # | name|age|
 # +-----+---+
@@ -68,7 +68,7 @@ spark.createDataFrame([], "name: string, age: int").show()
 from pyspark.sql import Row
 
 Person = Row('name', 'age')
-spark.createDataFrame([Person("Alice", 1),Person("张三",13)]).show()
+spark.createDataFrame([Person("Alice", 1), Person("张三", 13)]).show()
 # +-----+---+
 # | name|age|
 # +-----+---+
@@ -77,14 +77,16 @@ spark.createDataFrame([Person("Alice", 1),Person("张三",13)]).show()
 # +-----+---+
 
 # 从 pandas DataFrame 创建 DataFrame。
-spark.createDataFrame(spark.createDataFrame([Person("Alice", 1),Person("张三",13)]).toPandas()).show()  # doctest: +SKIP
+spark.createDataFrame(
+    spark.createDataFrame([Person("Alice", 1), Person("张三", 13)]).toPandas()).show()  # doctest: +SKIP
 # +-----+---+
 # | name|age|
 # +-----+---+
 # |Alice|  1|
 # | 张三| 13|
 # +-----+---+
-import  pandas
+import pandas
+
 spark.createDataFrame(pandas.DataFrame([[1, 2]])).collect()  # doctest: +SKIP
 # +-----+---+
 # | name|age|
