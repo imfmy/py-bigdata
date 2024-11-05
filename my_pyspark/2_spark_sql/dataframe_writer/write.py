@@ -5,17 +5,18 @@ from pyspark.sql.types import StructType
 spark = SparkSession.builder.appName("Example").config("k1", "v1").getOrCreate()
 sc = SparkContext("local", "PySpark Example")
 ####### 初始化 spark、sc #######
-data = [("张三", 13), ("李四", 14), ("王五", 14), ("麻子", 13)]
+data = [("张三", 13), ("李四", 14), ("王五", 15), ("麻子", 12)]
 df = spark.createDataFrame(data=data, schema=["name", "age"],)
 df.show()
 # +----+---+
 # |name|age|
 # +----+---+
-# |王五| 14|
-# |李四| 14|
 # |张三| 13|
-# |麻子| 13|
+# |李四| 14|
+# |王五| 15|
+# |麻子| 12|
 # +----+---+
+
 # 以默认参数写入csv文件
 df.write.csv("csv_file/output.csv", header=True)
 # ll csv_file/output.csv/
