@@ -29,7 +29,16 @@ df.select("name", "id", "name").show()
 # |  Bob|  2|  Bob|
 # |Cathy|  3|Cathy|
 # +-----+---+-----+
-
+df.select(df[0],df[1]).show()
+# +-----+---+
+# | name| id|
+# +-----+---+
+# |Alice|  1|
+# |  Bob|  2|
+# |Cathy|  3|
+# +-----+---+
+df.select(df[2]).show()
+# IndexError: list index out of range
 from pyspark.sql.functions import col
 
 df.select(col("name").alias("full_name")).show()
