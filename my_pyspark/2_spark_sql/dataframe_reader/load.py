@@ -15,6 +15,6 @@ df.show()
 # |李四| 14|
 # |王五| 14|
 # +----+---+
-df.write
+spark.read.load()
 ####### 关闭 SparkContext #######
 sc.stop()
