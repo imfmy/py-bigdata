@@ -20,5 +20,15 @@ df.show()
 # |  19| Justin|
 # +----+-------+
 
+jsonStrings = ['{"name":"Yin","address":{"city":"Columbus","state":"Ohio"}}']
+otherPeopleRDD = sc.parallelize(jsonStrings)
+otherPeople = spark.read.json(otherPeopleRDD)
+otherPeople.show()
+# +----------------+----+
+# |         address|name|
+# +----------------+----+
+# |{Columbus, Ohio}| Yin|
+# +----------------+----+
+
 ####### 关闭 SparkContext #######
 sc.stop()
